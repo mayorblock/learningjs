@@ -32,15 +32,17 @@ var layout = {
   };
 
 
+
 $("button").click(function(){
     $.get("http://127.0.0.1:8000/temperature", function(data, status){
+      var plotType = document.getElementById("plottype").value 
       console.log(data);
       console.log(status)
 
       var trace = {
         x: data["dates"],
         y: data["temperature"],
-        type: 'scatter'
+        type: plotType
       };
       
      Plotly.newPlot('tester', [trace], layout);

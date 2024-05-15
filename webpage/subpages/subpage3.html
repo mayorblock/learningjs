@@ -2,10 +2,18 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdn.plot.ly/plotly-2.32.0.min.js" charset="utf-8"></script>
-
+<link rel="stylesheet" href="../main.css">
+</head>
 <body>
 
   <button>Send HTTP GET til temperatur API og plot resultat</button>
+  
+
+  <select style="width: 280px" id="plottype" class="dropdown">
+    <option selected="scatter">Vælg plot type</option>
+    <option value="scatter">linje</option>
+    <option value="bar">bar</option>
+    </select>
   <div id="tester" style="width:600px;height:400px;"></div>
 
   <script src="script.js"></script> 
